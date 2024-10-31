@@ -1,8 +1,35 @@
-import redis from 'redis';
-const client = redis.createClient();
+import mongoose from 'mongoose';
 
-client.on('error', (err) => {
-  console.log(`Error: ${err}`);
-});
+const userSchema = new mongoose.Schema(
+  {
+    username: {
+      required: true,
+      type: String,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    cpassword: {
+      type: String,
+      required: true,
+    },
 
-client.set('string key', 'string val');
+    phone: {
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+const User = new mongoose.Model('User', userSchema);
+
+export default User;
