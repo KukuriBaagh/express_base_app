@@ -11,20 +11,24 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.2.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "couchbase": "^4.4.3",
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "elasticsearch": "^16.7.3",
-    "express": "^4.21.1",
+    "express": "^5.0.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.3",
-    "mysql": "^2.18.1",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "mysql2": "~3.12.0",
     "neo4j-driver": "^5.26.0",
     "pg-promise": "^11.10.1",
     "redis": "^4.7.0",
     "sqlite3": "^5.1.7",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
